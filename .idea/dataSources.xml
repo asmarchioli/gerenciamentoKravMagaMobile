@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="gerenciamento_kravmaga@localhost" uuid="5084b2ed-74e0-498e-a1fa-0f1e5ca0b57a">
+    <data-source source="LOCAL" name="gerenciamento_kravmaga_mobile@localhost" uuid="5084b2ed-74e0-498e-a1fa-0f1e5ca0b57a">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/src/main/resources/application.properties</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/gerenciamento_kravmaga</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/gerenciamento_kravmaga_mobile</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.host.port" />
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
