@@ -59,4 +59,12 @@ public class AlunoController {
         alunoService.deletarPorId(id);
         return ResponseEntity.noContent().build();
     }
+
+    //Buscar aluno
+    @GetMapping("{id}")
+    public ResponseEntity<Aluno> buscarPorId(@PathVariable Long id) {
+        return alunoService.pesquisarPorId(id)
+                .map(aluno -> ResponseEntity.ok(aluno))
+                .orElse(ResponseEntity.notFound().build());
+    }
 }
