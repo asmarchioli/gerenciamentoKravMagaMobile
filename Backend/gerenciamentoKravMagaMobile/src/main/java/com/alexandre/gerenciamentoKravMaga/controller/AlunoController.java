@@ -1,19 +1,13 @@
 package com.alexandre.gerenciamentoKravMaga.controller;
 
 import com.alexandre.gerenciamentoKravMaga.model.Aluno;
-import com.alexandre.gerenciamentoKravMaga.model.Faixa;
 import com.alexandre.gerenciamentoKravMaga.service.AlunoService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 import java.util.List;
-import java.util.Optional;
-import jakarta.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/api/alunos")
