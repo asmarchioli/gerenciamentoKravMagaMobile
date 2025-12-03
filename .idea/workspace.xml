@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e28466e1-42b6-4bfa-a9c8-f550ca0443b7" name="Changes" comment="Commit 3 - Moving all the files to a new folder and organizing" />
     <option name="SHOW_DIALOG" value="false" />
