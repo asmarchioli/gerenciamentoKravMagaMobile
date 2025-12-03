@@ -33,8 +33,7 @@ public class AlunoController {
 
     //Cadastrar aluno
     @PostMapping
-    public ResponseEntity<?> salvar(@RequestBody @Valid Aluno aluno,
-                                    BindingResult result) {
+    public ResponseEntity<Aluno> salvar(@RequestBody @Valid Aluno aluno) {
         Aluno alunoSalvo = alunoService.salvar(aluno);
         return ResponseEntity.status(HttpStatus.CREATED).body(alunoSalvo);
     }
