@@ -14,7 +14,7 @@ export default function LoginScreen({ navigation }) {
             }
         } catch (error) {
             Alert.alert('Erro', 'Login ou senha inválidos!');
-        ]   
+        }   
     };
 
     return (
@@ -44,4 +44,42 @@ export default function LoginScreen({ navigation }) {
     );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        padding: 20,
+        backgroundColor: '#222',
+    },
+    title: {
+        fontSize: 28,
+        fontWeight: 'bold',
+        marginBottom: 40,
+        textAlign: 'center',
+        color: '#fff',
+    },
+    highlight: {
+        color: '#e74c3c',
+    },
+    input: { 
+        backgroundColor: '#303030',
+        color: '#fff',
+        padding: 15, 
+        borderRadius: 5, 
+        marginBottom: 15, 
+        borderWidth: 1, 
+        borderColor: '#444' 
+    },
+    button: {
+        backgroundColor: '#e74c3c',
+        padding: 15,
+        borderRadius: 5,
+        alignItems: 'center',
+        marginTop: 10
+    },
+    buttonText: {
+        color: '#fff',
+        fontWeight: 'bold',
+        fontSize: 16
+    }
+});
