@@ -1,6 +1,6 @@
 package com.alexandre.gerenciamentoKravMaga.service;
 
-import com.alexandre.gerenciamentoKravMaga.exception.Exception;
+import com.alexandre.gerenciamentoKravMaga.exception.RegraNegocioException;
 import com.alexandre.gerenciamentoKravMaga.model.Aluno;
 import com.alexandre.gerenciamentoKravMaga.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,19 +61,19 @@ public class AlunoService {
         //VALIDAÇÃO DE UNICIDADE PARA CPF
         Optional<Aluno> alunoExistenteCpf = alunoRepository.findByCpf(aluno.getCpf());
         if (alunoExistenteCpf.isPresent() && !alunoExistenteCpf.get().getId().equals(aluno.getId())) {
-            throw new Exception("CPF já cadastrado no sistema!");
+            throw new RegraNegocioException("CPF já cadastrado no sistema!");
         }
 
         //VALIDAÇÃO DE UNICIDADE PARA TELEFONE
         Optional<Aluno> alunoExistenteTelefone = alunoRepository.findByTelefone(aluno.getTelefone());
         if (alunoExistenteTelefone.isPresent() && !alunoExistenteTelefone.get().getId().equals(aluno.getId())) {
-            throw new Exception("Telefone já cadastrado no sistema!");
+            throw new RegraNegocioException("Telefone já cadastrado no sistema!");
         }
 
         //VALIDAÇÃO DE UNICIDADE PARA E-MAIL
         Optional<Aluno> alunoExistenteEmail = alunoRepository.findByEmailIgnoreCase(aluno.getEmail());
         if (alunoExistenteEmail.isPresent() && !alunoExistenteEmail.get().getId().equals(aluno.getId())) {
-            throw new Exception("E-mail já cadastrado no sistema!");
+            throw new RegraNegocioException("E-mail já cadastrado no sistema!");
         }
 
         return alunoRepository.save(aluno);
@@ -81,7 +81,7 @@ public class AlunoService {
 
     public void deletarPorId(Long id){
         if (!existsById(id)) {
-            throw new Exception("Aluno não encontrado!");
+            throw new RegraNegocioException("Aluno não encontrado!");
         }
         alunoRepository.deleteById(id);
     }
