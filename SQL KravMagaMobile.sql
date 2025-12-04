@@ -33,3 +33,14 @@ INSERT INTO alunos (nome, cpf, faixa, telefone, email, turma, endereco, data_nas
 ('Natália Jesus Soares', '345.678.901-23', 'BORDÔ', '(43) 99933-3456', 'natalia.soares@email.com', 'Avançado Noite', NULL, '1993-11-05', '2026-01-25'),
 ('Otávio Carvalho Rezende', '456.789.012-34', 'AMARELA', '(43) 98844-4567', 'otavio.rezende@email.com', 'Iniciante Noite', 'Rua Quintino Bocaiúva, 707, Londrina', '2000-01-09', '2026-03-20'),
 ('Patrícia Teixeira Lopes', '567.890.123-45', 'BRANCA', '(43) 99955-5678', 'patricia.lopes@email.com', 'Iniciante Manhã', 'Avenida Santos Dumont, 808, Londrina', '2002-09-17', '2026-06-10');
+
+
+administradoresUSE gerenciamento_kravmaga_mobile;
+
+CREATE TABLE administradores (
+	id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(50) NOT NULL,
+    senha VARCHAR(100) NOT NULL
+);
+
+INSERT INTO administradores (login, senha) VALUE ('admin', '123456')

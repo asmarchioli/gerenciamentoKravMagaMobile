@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e28466e1-42b6-4bfa-a9c8-f550ca0443b7" name="Changes" comment="Commit 3 - Moving all the files to a new folder and organizing" />
+    <list default="true" id="e28466e1-42b6-4bfa-a9c8-f550ca0443b7" name="Changes" comment="Commit 9 - New method in AlunoController (&quot;buscarPorId&quot;)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/KravMagaMOBILE/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/KravMagaMOBILE/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL KravMagaMobile.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL KravMagaMobile.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1764796666692</updated>
-      <workItem from="1764796667977" duration="1328000" />
+      <workItem from="1764796667977" duration="3639000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 3 - Moving all the files to a new folder and organizing">
       <option name="closed" value="true" />
@@ -77,7 +81,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764796736371</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit 8 - Fixing AlunoController logic (deleting bidingresult from method &quot;salvar&quot;)">
+      <option name="closed" value="true" />
+      <created>1764803865506</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764803865506</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit 9 - New method in AlunoController (&quot;buscarPorId&quot;)">
+      <option name="closed" value="true" />
+      <created>1764804195003</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764804195003</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +105,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit 3 - Moving all the files to a new folder and organizing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 3 - Moving all the files to a new folder and organizing" />
+    <MESSAGE value="Commit 8 - Fixing AlunoController logic (deleting bidingresult from method &quot;salvar&quot;)" />
+    <MESSAGE value="Commit 9 - New method in AlunoController (&quot;buscarPorId&quot;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 9 - New method in AlunoController (&quot;buscarPorId&quot;)" />
   </component>
 </project>

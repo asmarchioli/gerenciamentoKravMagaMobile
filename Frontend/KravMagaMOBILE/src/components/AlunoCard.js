@@ -5,7 +5,7 @@ export default function AlunoCard({ aluno, onEdit, onDelete }) {
     return (
         <View style={styles.card}>
             <View style={styles.info}>
-                <Text style={styles.name}></Text>
+                <Text style={styles.name}>{aluno.nome}</Text>
                 <Text style={styles.detalhe}>Faixa <Text style={styles.valor}>{aluno.faixa}</Text></Text>
                 <Text style={styles.detalhe}>Turma: <Text style={styles.valor}>{aluno.turma}</Text></Text>
             </View>
@@ -14,7 +14,7 @@ export default function AlunoCard({ aluno, onEdit, onDelete }) {
                     <Text style={styles.btnText}>Editar</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={[styles.btn, styles.deleteBtn]} onPress={onDelete}>
-                    <Text style={styles.btnText}>Editar</Text>
+                    <Text style={styles.btnText}>Excluir</Text>
                 </TouchableOpacity>
             </View>
         </View>
