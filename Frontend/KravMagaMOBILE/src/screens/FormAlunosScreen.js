@@ -83,7 +83,7 @@ export default function FormAlunosScreen({ route, navigation }) {
             nome, cpf, faixa, turma, telefone, email,
             endereco: endereco || null, 
             dataNascimento: dataNascISO || null,
-            dataProxGraduacao: dataNascISO || null
+            dataProxGraduacao: dataProxISO || null
         };
 
         try {
@@ -100,28 +100,22 @@ export default function FormAlunosScreen({ route, navigation }) {
             let msg = 'Não foi possível salvar os dados do aluno.';
 
             if (error.response) {
-                // Log para depuração (veja no terminal do Metro o que o Java mandou)
+                //Log para depuração
                 console.log("Erro Backend:", JSON.stringify(error.response.data, null, 2));
 
                 const data = error.response.data;
 
-                // CASO 1: Erros de Validação do @Valid (Spring Boot padrão ou customizado)
-                // O formato pode variar dependendo de como o GlobalExceptionHandler monta.
-                // Se for o padrão do Spring Boot (sem handler): timestamp, status, error, path, etc.
-                // Se for o SEU GlobalExceptionHandler: { "errors": { "campo": "mensagem" } }
-                
                 if (data && data.errors) {
-                    // Transforma o objeto de erros {"cpf": "erro", "email": "erro"} em texto
-                    // Object.values pega só as mensagens: ["erro do cpf", "erro do email"]
+                    //Transforma o objeto de erros {"cpf": "erro", "email": "erro"} em texto
+                    //Object.values pega só as mensagens: ["erro do cpf", "erro do email"]
                     const listaErros = Object.values(data.errors);
                     msg = listaErros.join('\n'); // Junta com quebra de linha
                 } 
-                // CASO 2: Erro de Regra de Negócio (Sua RegraNegocioException)
-                // JSON: { "erro": "Mensagem específica" }
+                //JSON: { "erro": "Mensagem específica" }
                 else if (data && data.erro) {
                     msg = data.erro;
                 }
-                // CASO 3: Mensagem genérica de erro do Spring
+                //Mensagem genérica de erro do Spring
                 else if (data && data.message) {
                      msg = data.message;
                 }

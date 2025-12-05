@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e28466e1-42b6-4bfa-a9c8-f550ca0443b7" name="Changes" comment="Commit 9 - New method in AlunoController (&quot;buscarPorId&quot;)">
+    <list default="true" id="e28466e1-42b6-4bfa-a9c8-f550ca0443b7" name="Changes" comment="Commit 11 - Update backend logic and update frontend erros catch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/KravMagaMOBILE/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/KravMagaMOBILE/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL KravMagaMobile.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL KravMagaMobile.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,45 +15,45 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "asmarchioli"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;asmarchioli&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/asmarchioli/gerenciamentoKravMagaMobile.git",
-    "accountId": "3951f368-19da-4913-9c00-cf02b01db977"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/asmarchioli/gerenciamentoKravMagaMobile.git&quot;,
+    &quot;accountId&quot;: &quot;3951f368-19da-4913-9c00-cf02b01db977&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="36LrPJ8ejq4B5soyoka82JUOplN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/3D Objects/Projetos de Programação/UEL/2A2S - REACT+EXPO/gerenciamentoKravMagaMOBILE",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/3D Objects/Projetos de Programação/UEL/2A2S - REACT+EXPO/gerenciamentoKravMagaMOBILE&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -72,6 +70,8 @@
       <option name="presentableId" value="Default" />
       <updated>1764796666692</updated>
       <workItem from="1764796667977" duration="3639000" />
+      <workItem from="1764811736676" duration="86000" />
+      <workItem from="1764941024473" duration="707000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 3 - Moving all the files to a new folder and organizing">
       <option name="closed" value="true" />
@@ -97,7 +97,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764804195003</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit 11 - Update backend logic and update frontend erros catch">
+      <option name="closed" value="true" />
+      <created>1764811807815</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764811807815</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit 11 - Update backend logic and update frontend erros catch">
+      <option name="closed" value="true" />
+      <created>1764811815923</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764811815923</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +123,7 @@
     <MESSAGE value="Commit 3 - Moving all the files to a new folder and organizing" />
     <MESSAGE value="Commit 8 - Fixing AlunoController logic (deleting bidingresult from method &quot;salvar&quot;)" />
     <MESSAGE value="Commit 9 - New method in AlunoController (&quot;buscarPorId&quot;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 9 - New method in AlunoController (&quot;buscarPorId&quot;)" />
+    <MESSAGE value="Commit 11 - Update backend logic and update frontend erros catch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 11 - Update backend logic and update frontend erros catch" />
   </component>
 </project>
