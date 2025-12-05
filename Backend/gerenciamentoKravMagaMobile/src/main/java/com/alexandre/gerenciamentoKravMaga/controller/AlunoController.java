@@ -5,7 +5,7 @@ import com.alexandre.gerenciamentoKravMaga.service.AlunoService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
+import com.alexandre.gerenciamentoKravMaga.model.Faixa;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class AlunoController {
     }
 
     //Listas todos os alunos cadastrados
-    @GetMapping
+    /*@GetMapping
     public List<Aluno> listar() {
         return alunoService.listarTodos();
     }
@@ -29,6 +29,14 @@ public class AlunoController {
     @GetMapping("/busca")
     public List<Aluno> pesquisar(@RequestParam String termo) {
         return alunoService.pesquisarPorNome(termo);
+    }*/
+
+    @GetMapping
+    public List<Aluno> listar(
+            @RequestParam(required = false) String nome,
+            @RequestParam(required = false) Faixa faixa,
+            @RequestParam(required = false) String turma) {
+        return alunoService.listarComFiltros(nome, faixa, turma);
     }
 
     //Cadastrar aluno

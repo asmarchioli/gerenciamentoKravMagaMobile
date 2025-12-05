@@ -2,6 +2,7 @@ package com.alexandre.gerenciamentoKravMaga.service;
 
 import com.alexandre.gerenciamentoKravMaga.exception.RegraNegocioException;
 import com.alexandre.gerenciamentoKravMaga.model.Aluno;
+import com.alexandre.gerenciamentoKravMaga.model.Faixa;
 import com.alexandre.gerenciamentoKravMaga.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -31,10 +32,6 @@ public class AlunoService {
         return alunoRepository.findByEmailIgnoreCase(email);
     }
 
-    public Optional<Aluno> buscarPorTelefone(String telefone){
-        return alunoRepository.findByTelefone(telefone);
-    }
-
     public List<Aluno> pesquisarPorCPF(String cpf) {
         return alunoRepository.findByCpf(cpf)
                 .map(Collections::singletonList)
@@ -43,12 +40,6 @@ public class AlunoService {
 
     public List<Aluno> pesquisarPorEmail(String email) {
         return alunoRepository.findByEmailIgnoreCase(email)
-                .map(Collections::singletonList)
-                .orElse(Collections.emptyList());
-    }
-
-    public List<Aluno> pesquisarPorTelefone(String telefone) {
-        return alunoRepository.findByTelefone(telefone)
                 .map(Collections::singletonList)
                 .orElse(Collections.emptyList());
     }
@@ -88,5 +79,10 @@ public class AlunoService {
 
     public boolean existsById(Long id) {
         return alunoRepository.existsById(id);
+    }
+
+
+    public List<Aluno> listarComFiltros(String nome, Faixa faixa, String turma) {
+        return alunoRepository.buscarComFiltros(nome, faixa, turma);
     }
 }
