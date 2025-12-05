@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, Image } from 'react-native';
 import api from '../services/api';
 
 export default function LoginScreen({ navigation }) {
@@ -19,6 +19,12 @@ export default function LoginScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
+            <Image 
+                source={require('../../assets/caveira-icon.png')} 
+                style={styles.logo} 
+                resizeMode="contain"
+            />
+
             <Text style={styles.title}>Krav Maga <Text style={styles.highlight}>K4VEIRA</Text></Text>
             <TextInput
                 style={styles.input}
@@ -48,8 +54,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
+        alignItems: 'center',
         padding: 20,
         backgroundColor: '#222',
+    },
+    logo: {
+        width: 180,
+        height: 180,
+        marginBottom: 20,
     },
     title: {
         fontSize: 28,
@@ -61,7 +73,8 @@ const styles = StyleSheet.create({
     highlight: {
         color: '#e74c3c',
     },
-    input: { 
+    input: {
+        width: '100%',
         backgroundColor: '#303030',
         color: '#fff',
         padding: 15, 
@@ -71,6 +84,7 @@ const styles = StyleSheet.create({
         borderColor: '#444' 
     },
     button: {
+        width: '100%',
         backgroundColor: '#e74c3c',
         padding: 15,
         borderRadius: 5,

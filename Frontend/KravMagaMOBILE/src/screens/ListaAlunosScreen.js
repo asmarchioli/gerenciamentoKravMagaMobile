@@ -1,5 +1,5 @@
-import React, { useState, useCallback } from 'react';
-import { View, Text, FlatList, StyleSheet, TextInput, Alert, TouchableOpacity } from 'react-native';
+import React, { useState, useCallback, useLayoutEffect } from 'react';
+import { View, Text, FlatList, StyleSheet, TextInput, Alert, TouchableOpacity, Image } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import api from '../services/api';
 import { Picker } from '@react-native-picker/picker';
@@ -39,6 +39,28 @@ export default function ListaAlunosScreen({ navigation }) {
         await loadAlunos();
         setRefreshing(false);
     };
+
+    const handleLogout = () => {
+        navigation.replace('Login');
+    };
+
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            headerRight: () => (
+                <View style={styles.headerRightContainer}>
+                    <TouchableOpacity onPress={handleLogout} style={styles.logoutButton}>
+                        <Text style={styles.logoutText}>SAIR</Text>
+                    </TouchableOpacity>
+                    
+                    <Image
+                        source={require('../../assets/caveira-icon.png')}
+                        style={styles.headerIcon}
+                        resizeMode="contain"
+                    />
+                </View>
+            ),
+        });
+    }, [navigation]);
 
     const limparFiltros = () => {
         setNomeSearch('');
@@ -238,4 +260,26 @@ const styles = StyleSheet.create({
         color: '#adb5bd',
         fontSize: 14
     },
+    headerRightContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    logoutButton: {
+        marginRight: 15,
+        paddingVertical: 6,
+        paddingHorizontal: 12,
+        backgroundColor: '#222',
+        borderRadius: 5,
+        borderWidth: 1,
+        borderColor: '#444',
+    },
+    logoutText: {
+        color: '#ffffffff',
+        fontWeight: 'bold',
+        fontSize: 13,
+    },
+    headerIcon: {
+        width: 40,
+        height: 40,
+    }
 });
